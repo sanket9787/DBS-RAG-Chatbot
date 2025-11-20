@@ -43,7 +43,9 @@
 !env.example
 
 # Data and logs
-**/data/
+data/
+!data/processed/
+!data/processed/*.json
 **/*.log
 **/logs/
 

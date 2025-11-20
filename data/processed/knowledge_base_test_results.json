@@ -1,0 +1,38 @@
+{
+  "queries_tested": 5,
+  "successful_queries": 5,
+  "failed_queries": 0,
+  "query_results": [
+    {
+      "query": "What courses are available at DBS?",
+      "status": "success",
+      "results_count": 5,
+      "top_result": "Outstanding teaching staff and learning environment At DBS all your potential for business and manag..."
+    },
+    {
+      "query": "How do I apply for admission?",
+      "status": "success",
+      "results_count": 5,
+      "top_result": "School Leaver Applicants Application for first year full-time programmes in the college is through t..."
+    },
+    {
+      "query": "What student support services are available?",
+      "status": "success",
+      "results_count": 5,
+      "top_result": "Search Corporate Services DBS Library International Students Current Students News Events Courses CO..."
+    },
+    {
+      "query": "What are the entry requirements?",
+      "status": "success",
+      "results_count": 5,
+      "top_result": "Search Corporate Services DBS Library International Students Current Students News Events Courses CO..."
+    },
+    {
+      "query": "How much does it cost to study at DBS?",
+      "status": "success",
+      "results_count": 5,
+      "top_result": "Fees The fee for this course is 1,500.  This is inclusive of tuition, registration, exam fees and DB..."
+    }
+  ],
+  "test_timestamp": "2025-11-09T21:09:48.257423"
+}

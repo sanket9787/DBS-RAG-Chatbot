@@ -1,0 +1,23 @@
+{
+  "total_items_processed": 391,
+  "total_chunks_created": 391,
+  "web_content_items": 179,
+  "pdf_content_items": 0,
+  "failed_items": 0,
+  "categories": {
+    "general": 130,
+    "courses": 46,
+    "admissions": 2,
+    "about": 1
+  },
+  "subcategories": {
+    "general_other": 130,
+    "courses_postgraduate": 27,
+    "courses_general": 17,
+    "admissions_requirements": 1,
+    "courses_undergraduate": 2,
+    "about_general": 1,
+    "admissions_international": 1
+  },
+  "processing_timestamp": "2025-11-09T21:07:26.840842"
+}
