@@ -1,0 +1,25 @@
+# Minimal requirements for data collection
+# No version constraints for Python 3.13 compatibility
+
+# Web Scraping
+aiohttp
+beautifulsoup4
+requests
+
+# PDF Processing
+PyPDF2
+pdfplumber
+
+# Text Processing
+nltk
+
+# Vector Database and Embeddings
+chromadb
+openai
+
+# Data Processing
+pandas
+numpy
+
+# Utilities
+python-dotenv

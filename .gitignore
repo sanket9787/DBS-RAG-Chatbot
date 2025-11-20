@@ -1,0 +1,62 @@
+# Ignore everything by default
+*
+
+# But keep these specific files
+!.gitignore
+!.dockerignore
+!README.md
+!Dockerfile
+!docker-compose.prod.yml
+!env.example
+!requirements.txt
+
+# Keep these directories and their contents
+!backend/
+!backend/**
+!frontend/
+!frontend/**
+!scripts/
+!scripts/**
+
+# Ignore common unwanted files within those directories
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.pytest_cache/
+**/.coverage
+**/coverage.xml
+**/htmlcov/
+
+# Node.js
+**/node_modules/
+**/.next/
+**/out/
+**/.vercel/
+**/.npm-cache/
+**/package-lock.json
+
+# Environment files (except example)
+**/.env
+**/.env.*
+!env.example
+
+# Data and logs
+**/data/
+**/*.log
+**/logs/
+
+# IDE and OS
+**/.DS_Store
+**/Thumbs.db
+**/.vscode/
+**/.idea/
+**/*.swp
+**/*.swo
+
+# Virtual environments
+**/venv/
+**/.venv/
+**/env/
+**/ENV/

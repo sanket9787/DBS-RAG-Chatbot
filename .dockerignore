@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+node_modules/
+.next/
+frontend/
+docs/
+notebooks/
+logs/
+monitoring/
+nginx/
+scripts/
+*.log
+*.md
+.git/
+.gitignore
+
+# Data (will be mounted as volume)
+data/chroma_db/
+data/raw/
+data/processed/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
