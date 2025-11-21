@@ -42,8 +42,8 @@ scripts/
 .git/
 .gitignore
 
-# Data (will be mounted as volume)
-data/chroma_db/
+# Data (chroma_db is now baked into image, others excluded)
+# data/chroma_db/  # Now included in image
 data/raw/
 data/processed/
 
