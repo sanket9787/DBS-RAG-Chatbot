@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 async def lifespan(app: FastAPI):
     """Application lifespan manager"""
     # Startup
-    logger.info("🚀 Starting DBS Chatbot Backend...")
+    logger.info("Starting DBS Chatbot Backend...")
     
     try:
         # Initialize vector store
@@ -72,9 +72,12 @@ app = FastAPI(
 )
 
 # CORS middleware
+# Allow all origins in production if configured, otherwise use specific origins
+cors_origins = ["*"] if settings.ALLOW_ALL_ORIGINS else settings.CORS_ORIGINS
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
+    allow_origins=cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

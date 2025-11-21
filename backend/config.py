@@ -25,12 +25,31 @@ class Settings(BaseModel):
     DEBUG: bool = os.getenv("DEBUG", "False").lower() == "true"
     
     # CORS settings
-    CORS_ORIGINS: List[str] = [
-        "http://localhost:3000",
-        "http://localhost:3001",
-        "http://127.0.0.1:3000",
-        "http://127.0.0.1:3001",
-    ]
+    # Allow CORS_ORIGINS from environment variable, or use defaults
+    _cors_origins_env = os.getenv("CORS_ORIGINS", "")
+    _debug_mode = os.getenv("DEBUG", "False").lower() == "true"
+    
+    if _cors_origins_env:
+        if _cors_origins_env.strip() == "*":
+            # Allow all origins
+            CORS_ORIGINS: List[str] = ["*"]
+        else:
+            # Parse comma-separated origins from environment
+            CORS_ORIGINS: List[str] = [origin.strip() for origin in _cors_origins_env.split(",")]
+    elif not _debug_mode:
+        # In production (non-debug), allow all origins by default
+        CORS_ORIGINS: List[str] = ["*"]
+    else:
+        # Default origins for development
+        CORS_ORIGINS: List[str] = [
+            "http://localhost:3000",
+            "http://localhost:3001",
+            "http://127.0.0.1:3000",
+            "http://127.0.0.1:3001",
+        ]
+    
+    # In production, allow all origins if CORS_ORIGINS contains "*"
+    ALLOW_ALL_ORIGINS: bool = "*" in CORS_ORIGINS
     
     # OpenAI settings
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
