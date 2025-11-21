@@ -46,6 +46,8 @@
 data/
 !data/processed/
 !data/processed/*.json
+!data/chroma_db/
+!data/chroma_db/**
 **/*.log
 **/logs/
 
@@ -62,3 +64,4 @@ data/
 **/.venv/
 **/env/
 **/ENV/
+data/chroma_db/.DS_Store

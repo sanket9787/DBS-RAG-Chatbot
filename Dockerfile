@@ -31,8 +31,8 @@ ENV PATH=/root/.local/bin:$PATH
 # Copy application code
 COPY backend/ ./backend/
 
-# Create data directory for ChromaDB (will be mounted as volume in production)
-RUN mkdir -p ./data/chroma_db
+# Copy ChromaDB data (baked into image)
+COPY data/chroma_db/ ./data/chroma_db/
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
